@@ -28,6 +28,10 @@
                             @Html.ActionLink("Contact", "Contact", "Customer", new { @class = "nav-link" })
                         </li>
                     </ul>
+                    <form class="d-flex" method="post" action="/Customer/Index">  
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="fullname">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
         </nav>

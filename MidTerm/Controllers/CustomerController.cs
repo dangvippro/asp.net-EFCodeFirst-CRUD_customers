@@ -17,6 +17,13 @@ namespace MidTerm.Controllers
             return View(list);
         }
 
+        [HttpPost]
+        public ActionResult Index(string fullname="")
+        {
+            List<Customer> list = db.Customers.Where(row => row.fullname.Contains(fullname)).ToList();
+            return View(list);
+        }
+
         public ActionResult Create()
         {
             return View();
